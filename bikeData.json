@@ -1,0 +1,72 @@
+{
+  "fuji-transonic-carbon-racing": {
+    "path": "fuji-transonic-carbon-racing",
+    "name": "Fuji Transonic 2.3",
+    "desc": "Full Carbon Fiber Racing Bike",
+    "price": 1999,
+    "alt": "Blue Fuji Carbon Fiber Sport Bike"
+  },
+  "kestrel-talon-x-carbon": {
+    "path": "kestrel-talon-x-carbon",
+    "name": "Kestrel Talon X",
+    "desc": "Racing Bike - AeroCarbon Frame",
+    "price": 2249,
+    "alt": "Blue Kestrel Carbon Fiber Racing Bike"
+  },
+  "motobecane-immortal-carbon": {
+    "path": "motobecane-immortal-carbon",
+    "name": "Motobecane Immortal Series",
+    "desc": "Full Carbon Fiber Road Bike",
+    "price": 1799,
+    "alt": "Red Motobecane Carbon Fiber Racer"
+  },
+  "moto-womens-road": {
+    "path": "moto-womens-road",
+    "name": "Motobecane Gigi",
+    "desc": "Women's Carbon Road Bike",
+    "price": 1599,
+    "alt": "Teal Women's Carbon Road Bike"
+  },
+  "moto-grand-record-carbon-fork": {
+    "path": "moto-grand-record-carbon-fork",
+    "name": "Motobecane Grand Record",
+    "desc": "Road Bike with Carbon Fork",
+    "price": 1299,
+    "alt": "Yellow Motobecane Road Bike"
+  },
+  "gravity-fsx-full-susp": {
+    "path": "gravity-fsx-full-susp",
+    "name": "Gravity FSX",
+    "desc": "Full Suspension Mountain Bike with Disc Brakes",
+    "price": 999,
+    "alt": "Red Gravity Full Suspension Mountain Bike"
+  },
+  "windsor-trail-fs-mountain": {
+    "path": "windsor-trail-fs-mountain",
+    "name": "Windsor Trail FS",
+    "desc": "Full Suspension Mountain Bike",
+    "price": 749,
+    "alt": "Black Full Suspension Mountain Bike"
+  },
+  "moto-fantom-orange": {
+    "path": "moto-fantom-orange",
+    "name": "Motobecane Fantom",
+    "desc": "Mountain Bike with Front Shocks",
+    "price": 599,
+    "alt": "Orange Motobecane Mountain Bike"
+  },
+  "gravity-liberty-cx": {
+    "path": "gravity-liberty-cx",
+    "name": "Gravity Liberty CX",
+    "desc": "Cyclocross Bike, Aluminum Frame",
+    "price": 499,
+    "alt": "Lime Green Gravity Cyclocross Bike"
+  },
+  "gravity": {
+    "path": "gravity",
+    "name": "Gravity Zilla Cx",
+    "desc": "Cyclocross Bike with Disc Brakes",
+    "price": 699,
+    "alt": "Blue Gravity Cyclocross Bike"
+  }
+}

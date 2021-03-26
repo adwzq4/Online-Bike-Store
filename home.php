@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+    include 'connectionInfo.php';
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -25,10 +28,16 @@
 <div class="container-fluid" style="padding-top: 99px;">
     <div class="row">
         <ul class="col-xs-12 col-sm-9 col-md-3 col-lg-3 sidenav">
+            <?php if($_SESSION["currentUser"] !== "") :?>
+            <li><?php echo "Hello, " . $_SESSION["firstName"]?></li><br><br>
             <li><a href="./home.php">Home Page</a></li>
-            <li><a href="./registration.php">Registration</a></li>
-            <li><a href="./animations.php">Animations</a></li>
-            <li>Store coming soon!</li>
+            <li>View Cart</li>
+            <li><a href="./logout.php">Logout</a></li>
+            <?php else :?>
+            <li><a href="./home.php">Home Page</a></li>
+            <li><a href="loginPage.php">Login</a></li>
+            <li><a href="./registration.php">Register</a></li>
+            <?php endif; ?>
         </ul>
         <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 content">
             <div class="transbox-wide">

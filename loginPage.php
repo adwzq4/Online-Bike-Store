@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+include 'connectionInfo.php';
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="./css/styles.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./js/login.js"></script>
     <title>BikeSite - Animations</title>
 </head>
 <body>
@@ -26,12 +30,29 @@
     <div class="row">
         <ul class="col-xs-12 col-sm-9 col-md-3 col-lg-3 sidenav">
             <li><a href="./home.php">Home Page</a></li>
+            <li><a href="./loginPage.php">Login</a></li>
             <li><a href="./registration.php">Registration</a></li>
-            <li><a href="./animations.php">Animations</a></li>
-            <li>Store coming soon!</li>
         </ul>
+        <?php
+            include 'loginValidate.php';
+        ?>
         <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 content">
-            <img id ="animation1" src="img/mbs.jpg" height="257" width="238" alt="Mountain Biker Silhuoette"/>
+            <div class="transbox">
+                <form method="post" class="needs-validation" novalidate action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+                    <div class="form-group" id="loginUser">
+                        <label for="loginUser">Username:</label>
+                        <input name="loginUser" class="form-control" type="text" required
+                               onblur="checkForms();" value="<?php echo $loginUser; ?>"/>
+                    </div>
+                    <div class="form-group" id="loginPwd">
+                        <label for="loginPwd">Password:</label>
+                        <input name="loginPwd" class="form-control" type="password" required
+                               onblur="checkForms();" value="<?php echo $loginPwd; ?>"/>
+                    </div>
+                    <input type="submit" id="loginSubmit" class="btn btn-success" value="Submit" disabled><br><br>
+                    <p id="login-feedback" class="feedback error"><?php echo $loginErr;?></p>
+                </form>
+            </div>
         </div>
     </div>
 </div>

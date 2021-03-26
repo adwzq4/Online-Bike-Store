@@ -51,20 +51,18 @@ body {
     to   { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
 }
 
-
 div.transbox {
-    margin: 20px 0 40px 40px;
+    margin: 40px 0px 40px 80px;
     background-color: #d1e2ff;
     border: 2px solid black;
     border-radius: 20px;
     padding: 30px;
     opacity: 0.95;
     width: 40%
-
 }
 
 div.transbox-wide {
-    margin: 40px 0 40px 40px;
+    margin: 40px 40px 40px 40px;
     padding: 10px;
     text-align: center;
     background-color: #b1d5eb;

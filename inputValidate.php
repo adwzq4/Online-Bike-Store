@@ -21,10 +21,29 @@
             $userNameErr = "Exceeded character limit (6-50)";
             $isValid = false;
         }
+        elseif (strlen($userName) < 6) {
+            $userNameErr = "Too few characters (6-50)";
+            $isValid = false;
+        }
         else {
-            if (strlen($userName) < 6) {
-                $userNameErr = "Too few characters (6-50)";
-                $isValid = false;
+            try {
+                $conn = new PDO("mysql:host=$servername; dbname=$dbname", $username, $password);
+                $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                $stmt = $conn->prepare("SELECT userName FROM registration WHERE userName = :userName");
+                $stmt->bindParam(':userName', $userName);
+                $stmt->execute();
+                $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+
+                if ($stmt->fetchAll()) {
+                    $userNameErr = "That username already exists";
+                    $isValid = false;
+                }
+            }
+            catch(PDOException $e) {
+                echo "Connection failed: " . $e->getMessage();
+            }
+            finally {
+                $conn = null;
             }
         }
 

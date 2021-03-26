@@ -11,7 +11,7 @@ include 'connectionInfo.php';
     <link rel="stylesheet" type="text/css" href="./css/styles.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="./js/registrationjs.js"></script>
+    <script src="js/registration.js"></script>
     <title>BikeSite - Confirmation</title>
 </head>
 <body id="registration-body">
@@ -30,8 +30,8 @@ include 'connectionInfo.php';
     <div class="row">
         <ul class="col-xs-12 col-sm-9 col-md-3 col-lg-3 sidenav">
             <li><a href="./home.php">Home Page</a></li>
+            <li><a href="loginPage.php">Login</a></li>
             <li><a href="./registration.php">Registration</a></li>
-            <li><a href="./animations.php">Animations</a></li>
             <li>Store coming soon!</li>
         </ul>
         <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 content">

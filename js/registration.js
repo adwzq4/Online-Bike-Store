@@ -320,18 +320,18 @@ function checkPhone(ele){
 }
 
 function resetForms() {
-    var forms = document.getElementsByClassName("form-group");
-    var feedbacks = document.getElementsByClassName("feedback");
-    for(i=0; i<forms.length; i++){
+    const forms = document.getElementsByClassName("form-group");
+    const feedbacks = document.getElementsByClassName("feedback");
+    for(let i=0; i<forms.length; i++){
         forms.item(i).classList.remove("valid", "invalid", "was-validated");
         feedbacks.item(i).innerHTML = "*";
     }
 }
 
 function checkForms() {
-    var forms = document.getElementsByClassName("form-group");
-    var inputs = document.getElementsByClassName("form-control");
-    for(i=0; i<forms.length; i++){
+    const forms = document.getElementsByClassName("form-group");
+    const inputs = document.getElementsByClassName("form-control");
+    for(let i=0; i<forms.length; i++){
         if (inputs.item(i).hasAttribute("required") && !(forms.item(i).classList.contains("valid"))){
             document.getElementById("submit").disabled = true;
             return;
