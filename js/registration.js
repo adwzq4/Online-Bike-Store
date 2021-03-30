@@ -1,8 +1,8 @@
 function checkUsername(ele){
-    var username = String(ele.value).trim();
-    var length = username.length;
-    var formEle = document.getElementById("username");
-    var pEle = document.getElementById("username-feedback");
+    const username = String(ele.value).trim();
+    const length = username.length;
+    const formEle = document.getElementById("username");
+    const pEle = document.getElementById("username-feedback");
 
     if(length > 5 && length < 51){
         pEle.innerHTML = "* Valid username";
@@ -18,14 +18,14 @@ function checkUsername(ele){
 }
 
 function checkPwd(ele){
-    var pwd = String(ele.value).trim();
-    var length = pwd.length;
-    var capital = pwd.search(/[A-Z]/);
-    var lowercase = pwd.search(/[a-z]/);
-    var digit = pwd.search(/[0-9]/);
-    var special = pwd.search(/\W|_/);
-    var formEle = document.getElementById("pwd");
-    var pEle = document.getElementById("pwd-feedback");
+    const pwd = String(ele.value).trim();
+    const length = pwd.length;
+    const capital = pwd.search(/[A-Z]/);
+    const lowercase = pwd.search(/[a-z]/);
+    const digit = pwd.search(/[0-9]/);
+    const special = pwd.search(/\W|_/);
+    const formEle = document.getElementById("pwd");
+    const pEle = document.getElementById("pwd-feedback");
 
     if(length > 7 && length < 51 && capital > -1 && lowercase > -1 && digit > -1 && special > -1){
         pEle.innerHTML = "* Valid password";
@@ -41,17 +41,17 @@ function checkPwd(ele){
 }
 
 function checkRepeatPwd(ele){
-    var rptPwd = String(ele.value).trim();
-    var length = rptPwd.length;
-    var capital = rptPwd.search(/[A-Z]/);
-    var lowercase = rptPwd.search(/[a-z]/);
-    var digit = rptPwd.search(/[0-9]/);
-    var special = rptPwd.search(/\W|_/);
-    var pwd = String(document.getElementById("password-text").value).trim();
-    var formEle = document.getElementById("repeat-pwd");
-    var pEle = document.getElementById("repeat-pwd-feedback");
+    const rptPwd = String(ele.value).trim();
+    const length = rptPwd.length;
+    const capital = rptPwd.search(/[A-Z]/);
+    const lowercase = rptPwd.search(/[a-z]/);
+    const digit = rptPwd.search(/[0-9]/);
+    const special = rptPwd.search(/\W|_/);
+    const pwd = String(document.getElementById("password-text").value).trim();
+    const formEle = document.getElementById("repeat-pwd");
+    const pEle = document.getElementById("repeat-pwd-feedback");
 
-    if(length > 7 && length < 51 && capital > -1 && lowercase > -1 && digit > -1 && special > -1 && pwd == rptPwd){
+    if(length > 7 && length < 51 && capital > -1 && lowercase > -1 && digit > -1 && special > -1 && pwd === rptPwd){
         pEle.innerHTML = "* Passwords match";
         pEle.classList.remove("error");
         formEle.classList.remove("invalid");
@@ -65,10 +65,10 @@ function checkRepeatPwd(ele){
 }
 
 function checkFirstName(ele){
-    var firstName = String(ele.value).trim();
-    var length = firstName.length;
-    var formEle = document.getElementById("first-name");
-    var pEle = document.getElementById("first-name-feedback");
+    const firstName = String(ele.value).trim();
+    const length = firstName.length;
+    const formEle = document.getElementById("first-name");
+    const pEle = document.getElementById("first-name-feedback");
 
     if(length > 0 && length < 51){
         pEle.innerHTML = "* Valid first name";
@@ -84,10 +84,10 @@ function checkFirstName(ele){
 }
 
 function checkLastName(ele){
-    var LastName = String(ele.value).trim();
-    var length = LastName.length;
-    var formEle = document.getElementById("last-name");
-    var pEle = document.getElementById("last-name-feedback");
+    const LastName = String(ele.value).trim();
+    const length = LastName.length;
+    const formEle = document.getElementById("last-name");
+    const pEle = document.getElementById("last-name-feedback");
 
     if(length > 0 && length < 51){
         pEle.innerHTML = "* Valid last name";
@@ -103,10 +103,10 @@ function checkLastName(ele){
 }
 
 function checkAddress(ele){
-    var address = String(ele.value).trim();
-    var length = address.length;
-    var formEle = document.getElementById("address-1");
-    var pEle = document.getElementById("address-1-feedback");
+    const address = String(ele.value).trim();
+    const length = address.length;
+    const formEle = document.getElementById("address-1");
+    const pEle = document.getElementById("address-1-feedback");
 
     if(length > 0 && length < 101){
         pEle.innerHTML = "* Valid address";
@@ -122,10 +122,10 @@ function checkAddress(ele){
 }
 
 function checkAddress2(ele){
-    var address2 = String(ele.value).trim();
-    var length = address2.length;
-    var formEle = document.getElementById("address-2");
-    var pEle = document.getElementById("address-2-feedback");
+    const address2 = String(ele.value).trim();
+    const length = address2.length;
+    const formEle = document.getElementById("address-2");
+    const pEle = document.getElementById("address-2-feedback");
 
     if(length < 101){
         pEle.innerHTML = "* Valid address (line 2)";
@@ -141,10 +141,10 @@ function checkAddress2(ele){
 }
 
 function checkCity(ele){
-    var city = String(ele.value).trim();
-    var length = city.length;
-    var formEle = document.getElementById("city");
-    var pEle = document.getElementById("city-feedback");
+    const city = String(ele.value).trim();
+    const length = city.length;
+    const formEle = document.getElementById("city");
+    const pEle = document.getElementById("city-feedback");
 
     if(length > 0 && length < 51){
         pEle.innerHTML = "* Valid city";
@@ -160,10 +160,10 @@ function checkCity(ele){
 }
 
 function checkState(ele){
-    var state = String(ele.value).trim();
-    var length = state.length;
-    var formEle = document.getElementById("state");
-    var pEle = document.getElementById("state-feedback");
+    const state = String(ele.value).trim();
+    const length = state.length;
+    const formEle = document.getElementById("state");
+    const pEle = document.getElementById("state-feedback");
 
     if(length > 0 && length < 53){
         pEle.innerHTML = "* Valid state";
@@ -179,10 +179,10 @@ function checkState(ele){
 }
 
 function checkEmail(ele) {
-    var emailValue = String(ele.value).trim();
-    var i = emailValue.search(/^\S+@\S+\.\S+$/);
-    var formEle = document.getElementById("email");
-    var pEle = document.getElementById("email-feedback");
+    const emailValue = String(ele.value).trim();
+    const i = emailValue.search(/^\S+@\S+\.\S+$/);
+    const formEle = document.getElementById("email");
+    const pEle = document.getElementById("email-feedback");
 
     if(i > -1){
         pEle.innerHTML = "* Valid email";
@@ -198,10 +198,10 @@ function checkEmail(ele) {
 }
 
 function checkGender(ele){
-    var gender = String(ele.value).trim();
-    var length = gender.length;
-    var formEle = document.getElementById("gender");
-    var pEle = document.getElementById("gender-feedback");
+    const gender = String(ele.value).trim();
+    const length = gender.length;
+    const formEle = document.getElementById("gender");
+    const pEle = document.getElementById("gender-feedback");
 
     if(length > 0 && length < 51){
         pEle.innerHTML = "* Valid gender";
@@ -217,10 +217,10 @@ function checkGender(ele){
 }
 
 function checkMarital(ele){
-    var marital = String(ele.value).trim();
-    var length = marital.length;
-    var formEle = document.getElementById("marital-status");
-    var pEle = document.getElementById("marital-feedback");
+    const marital = String(ele.value).trim();
+    const length = marital.length;
+    const formEle = document.getElementById("marital-status");
+    const pEle = document.getElementById("marital-feedback");
 
     if(length > 0 && length < 51){
         pEle.innerHTML = "* Valid marital status";
@@ -236,10 +236,10 @@ function checkMarital(ele){
 }
 
 function checkBirthday(ele) {
-    var bday = String(ele.value).trim();
-    var i = bday.search(/^[0-1][0-9]\/[0-3][0-9]\/[1-2][0-9][0-9][0-9]$/);
-    var formEle = document.getElementById("birthday");
-    var pEle = document.getElementById("birthday-feedback");
+    const bday = String(ele.value).trim();
+    const i = bday.search(/^[0-1][0-9]\/[0-3][0-9]\/[1-2][0-9][0-9][0-9]$/);
+    const formEle = document.getElementById("birthday");
+    const pEle = document.getElementById("birthday-feedback");
 
     if (i > -1) {
         pEle.innerHTML = "* Valid birthday";
@@ -255,10 +255,10 @@ function checkBirthday(ele) {
 }
 
 function checkZip(ele) {
-    var zip = String(ele.value).trim();
-    var length = zip.length;
-    var formEle = document.getElementById("zip-code");
-    var pEle = document.getElementById("zip-feedback");
+    let zip = String(ele.value).trim();
+    let length = zip.length;
+    const formEle = document.getElementById("zip-code");
+    const pEle = document.getElementById("zip-feedback");
 
     if(length > 4 && length < 11){
         zip = zip.replace(/\D/g, '');
@@ -268,7 +268,7 @@ function checkZip(ele) {
         formEle.classList.remove("invalid");
         formEle.classList.add("valid", "was-validated");
 
-        if (length == 9){
+        if (length === 9){
             document.getElementById("zip-val").value = zip.slice(0,5) + "-" + zip.slice(5);
         }
         else{
@@ -283,22 +283,22 @@ function checkZip(ele) {
 }
 
 function checkPhone(ele){
-    var phone = String(ele.value).trim();
-    var length = phone.length;
-    var formEle = document.getElementById("phone");
-    var pEle = document.getElementById("phone-feedback");
+    let phone = String(ele.value).trim();
+    let length = phone.length;
+    const formEle = document.getElementById("phone");
+    const pEle = document.getElementById("phone-feedback");
 
     if(length > 6 && length < 13){
         phone = phone.replace(/\D/g, '');
         length = phone.length;
-        if (length == 7){
+        if (length === 7){
             pEle.innerHTML = "* Valid phone number";
             pEle.classList.remove("error");
             formEle.classList.remove("invalid");
             formEle.classList.add("valid", "was-validated");
             document.getElementById("phone-val").value = phone.slice(0,3) + "-" + phone.slice(3);
         }
-        else if (length == 10){
+        else if (length === 10){
             pEle.innerHTML = "* Valid phone number";
             pEle.classList.remove("error");
             formEle.classList.remove("invalid");

@@ -3,7 +3,7 @@ body {
     margin-right: auto;
     max-width: 1200px;
     min-height: 1100px;
-    margin-bottom: 100px;
+    margin-bottom: 200px;
     background-size: auto;
     background-image: url("../img/background.jpg");
 }
@@ -16,7 +16,9 @@ body {
     min-height: 1200px;
 }
 
-.form-control {height: auto;}
+.form-control {
+    height: auto;
+}
 
 #logo{
     float: left;
@@ -90,10 +92,16 @@ div.gallery img {
     height: auto;
 }
 
+.gallery-button {
+    background: white;
+    width: 100%;
+    opacity: 0.9;
+}
+
 div.desc {
     background: rgba(0,0,0,0.7);
     text-align: center;
-    color: #fff;
+    color: #ffffff;
     padding: 5px;
 }
 
@@ -182,4 +190,45 @@ div.content {
 
 input:focus {
     border: 3px solid black;
+}
+
+.tr::after {
+    margin-left: auto;
+    margin-right: auto;
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
+    text-align: center;
+    border: 2px solid #ddd;
+    float: left;
+}
+
+.th {
+    padding: 12px;
+    font-size: 18px;
+}
+
+.td {
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.total-price {
+    margin-left: auto;
+}
+
+thead {
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+
+.tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
