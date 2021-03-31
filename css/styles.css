@@ -203,7 +203,6 @@ input:focus {
 .table {
     border-collapse: collapse;
     width: 100%;
-    border-spacing: 0;
     text-align: center;
     border: 2px solid #ddd;
     float: left;
@@ -218,10 +217,7 @@ input:focus {
     padding: 12px;
     font-size: 16px;
     font-weight: bold;
-}
-
-.total-price {
-    margin-left: auto;
+    width: 25%;
 }
 
 thead {
@@ -231,4 +227,12 @@ thead {
 
 .tr:nth-child(even) {
     background-color: #f2f2f2;
+}
+
+input.quantity-input {
+    text-align: center;
+    width: 40%;
+    margin: auto 30% auto 30%;
+    padding-left: 10px;
+    padding-right: 10px;
 }

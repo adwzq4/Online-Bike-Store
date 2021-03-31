@@ -137,7 +137,6 @@ include 'connectionInfo.php';
                                    value="<?php echo $email; ?>"/>
                             <p id="email-feedback" class="feedback error">* <?php echo $emailErr;?></p>
                         </div>
-                        <button class="btn" onclick="resetForms();">Reset</button>
                         <input type="submit" id="submit" class="btn btn-success" value="Submit" disabled><br><br><br>
                         <p class="error">* indicates a required field.</p>
                     </div>

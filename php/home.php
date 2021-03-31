@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
     include 'connectionInfo.php';
-    $json = file_get_contents("./bikeData.json");
+    $json = file_get_contents("../bikeData.json");
     $bikeData = json_decode($json, true);
     $bikeData = array_values($bikeData);
 ?>
@@ -55,8 +55,8 @@
                     for ($i = 0; $i < ceil(count($bikeData)/2); $i++) {
                         echo
                         "<div class='gallery'>
-                            <a target='_blank' href='img/".$bikeData[$i]["path"].".jpg'>
-                                <img src='img/".$bikeData[$i]["path"].".jpg' height='360' width='600' alt='".$bikeData[$i]["alt"]."'/></a>
+                            <a target='_blank' href='../img/".$bikeData[$i]["path"].".jpg'>
+                                <img src='../img/".$bikeData[$i]["path"].".jpg' height='360' width='600' alt='".$bikeData[$i]["alt"]."'/></a>
                             <div class='desc'>".$bikeData[$i]["name"]." - ".$bikeData[$i]["desc"]." - $".$bikeData[$i]["price"]."</div>
                             <button class='gallery-button' name='".$bikeData[$i]["path"]."' 
                                     onclick='requestAddToCart(this)'>Add to cart</button>
@@ -69,8 +69,8 @@
                     for ($i = ceil(count($bikeData)/2); $i < count($bikeData); $i++) {
                         echo
                         "<div class='gallery'>
-                            <a target='_blank' href='img/".$bikeData[$i]["path"].".jpg'>
-                                <img src='img/".$bikeData[$i]["path"].".jpg' height='360' width='600' alt='".$bikeData[$i]["alt"]."'/></a>
+                            <a target='_blank' href='../img/".$bikeData[$i]["path"].".jpg'>
+                                <img src='../img/".$bikeData[$i]["path"].".jpg' height='360' width='600' alt='".$bikeData[$i]["alt"]."'/></a>
                             <div class='desc'>".$bikeData[$i]["name"]." - ".$bikeData[$i]["desc"]." - $".$bikeData[$i]["price"]."</div>
                             <button class='gallery-button' name='".$bikeData[$i]["path"]."'
                                     onclick='requestAddToCart(this)'>Add to cart</button>
