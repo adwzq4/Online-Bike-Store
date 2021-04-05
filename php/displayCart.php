@@ -19,7 +19,7 @@ $bikeData = json_decode($json, true);
 <body id="home-body">
 <header class="header">
     <div class="container fluid">
-        <img id="logo" src="../img/logo.jpg" height="100" width="130" alt="BikeSite logo - BS"/>
+        <img id="logo" src="../img/logo.jpg" height="105" width="130" alt="BikeSite logo - BS"/>
         <div id="header-animation">
             <video width="160" height="120" autoplay loop muted playsinline>
                 <source src="../img/bike_silhuoette.webm" type="video/webm">

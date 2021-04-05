@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
 include 'connectionInfo.php';
+$loginUser = $loginErr = $loginPwd = "";
 ?>
 <html lang="en">
 <head>
@@ -17,7 +18,7 @@ include 'connectionInfo.php';
 <body>
 <header class="header">
     <div class="container fluid">
-        <img id="logo" src="../img/logo.jpg" height="100" width="130" alt="BikeSite logo - BS"/>
+        <img id="logo" src="../img/logo.jpg" height="105" width="130" alt="BikeSite logo - BS"/>
         <div id="header-animation">
             <video width="160" height="120" autoplay loop muted playsinline>
                 <source src="../img/bike_silhuoette.webm" type="video/webm">
@@ -41,14 +42,16 @@ include 'connectionInfo.php';
             <div class="transbox">
                 <form method="post" class="needs-validation" novalidate action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
                     <div class="form-group" id="loginUser">
-                        <label for="loginUser">Username:</label>
-                        <input name="loginUser" class="form-control" type="text" required
-                               onblur="checkForms();" value="<?php echo $loginUser; ?>"/>
+                        <label for="loginUser">Username:
+                            <input name="loginUser" class="form-control" type="text" required
+                                   onblur="checkForms();" value="<?php echo $loginUser; ?>"/>
+                        </label>
                     </div>
                     <div class="form-group" id="loginPwd">
-                        <label for="loginPwd">Password:</label>
-                        <input name="loginPwd" class="form-control" type="password" required
-                               onblur="checkForms();" value="<?php echo $loginPwd; ?>"/>
+                        <label for="loginPwd">Password:
+                            <input name="loginPwd" class="form-control" type="password" required
+                                   onblur="checkForms();" value="<?php echo $loginPwd; ?>"/>
+                        </label>
                     </div>
                     <input type="submit" id="loginSubmit" class="btn btn-success" value="Submit" disabled><br><br>
                     <p id="login-feedback" class="feedback error"><?php echo $loginErr;?></p>

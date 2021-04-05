@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <?php
 include 'connectionInfo.php';
+$firstName = $lastName = $userName = $address1 = $address2 = $bday = $city = "";
+$email = $gender = $marital = $phone = $pwd = $state = $zip = "";
 ?>
 <html lang="en">
 <head>
@@ -17,7 +19,7 @@ include 'connectionInfo.php';
 <body id="registration-body">
 <header class="header">
     <div class="container fluid">
-        <img id="logo" src="../img/logo.jpg" height="100" width="130" alt="BikeSite logo - BS"/>
+        <img id="logo" src="../img/logo.jpg" height="105" width="130" alt="BikeSite logo - BS"/>
         <div id="header-animation">
             <video width="160" height="120" autoplay loop muted playsinline>
                 <source src="../img/bike_silhuoette.webm" type="video/webm">
@@ -45,89 +47,103 @@ include 'connectionInfo.php';
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-6 transbox">
                         <div class="form-group" id="username">
-                            <label for="username">Username:</label>
-                            <input disabled name="username" class="form-control" type="text" required
-                                   value="<?php echo $userName; ?>"/>
+                            <label for="username">Username:
+                                <input disabled name="username" class="form-control" type="text" required
+                                       value="<?php echo $userName; ?>"/>
+                            </label>
                             <br>
                         </div>
                         <div class="form-group" id="pwd">
-                            <label for="pwd">Password:</label>
-                            <input disabled id="password-text" name="pwd" class="form-control" type="password" required
-                                   value="<?php echo $pwd; ?>"/>
+                            <label for="pwd">Password:
+                                <input disabled id="password-text" name="pwd" class="form-control" type="password" required
+                                     value="<?php echo $pwd; ?>"/>
+                            </label>
                             <br>
                         </div>
                         <div class="form-group" id="first-name">
-                            <label for="first-name">First Name:</label>
-                            <input disabled name="first-name" class="form-control" type="text" required
-                                   value="<?php echo $firstName; ?>"/>
+                            <label for="first-name">First Name:
+                                <input disabled name="first-name" class="form-control" type="text" required
+                                       value="<?php echo $firstName; ?>"/>
+                            </label>
                             <br>
                         </div>
                         <div class="form-group" id="last-name">
-                            <label for="last-name">Last Name:</label>
-                            <input disabled name="last-name" class="form-control" type="text" required
-                                   value="<?php echo $lastName; ?>"/>
+                            <label for="last-name">Last Name:
+                                <input disabled name="last-name" class="form-control" type="text" required
+                                       value="<?php echo $lastName; ?>"/>
+                            </label>
                             <br>
                         </div>
                         <div class="form-group" id="gender">
-                            <label class="control-label" for="gender">Gender:</label>
-                            <input disabled name="gender" class="form-control" type="text" required
-                                   value="<?php echo $gender; ?>"/>
+                            <label class="control-label" for="gender">Gender:
+                                <input disabled name="gender" class="form-control" type="text" required
+                                       value="<?php echo $gender; ?>"/>
+                            </label>
                             <br>
                         </div>
                         <div class="form-group" id="marital-status">
-                            <label for="marital-status">Marital Status:</label>
-                            <input disabled name="marital-status" class="form-control" type="text" required
-                                   value="<?php echo $marital; ?>"/>
+                            <label for="marital-status">Marital Status:
+                                <input disabled name="marital-status" class="form-control" type="text" required
+                                       value="<?php echo $marital; ?>"/>
+                            </label>
                             <br>
                         </div>
                         <div class="form-group" id="birthday">
-                            <label for="birthday">Birthday:</label>
-                            <input disabled name="birthday" class="form-control" type="text" required placeholder="mm/dd/yyyy"
-                                   value="<?php echo $bday; ?>"/>
+                            <label for="birthday">Birthday:
+                                <input disabled name="birthday" class="form-control" type="text" required placeholder="mm/dd/yyyy"
+                                       value="<?php echo $bday; ?>"/>
+                            </label>
                             <br>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6 transbox">
                         <div class="form-group" id="address-1">
-                            <label for="address-1">Address:</label>
-                            <input disabled name="address-1" class="form-control" type="text" required
-                                   value="<?php echo $address1; ?>"/>
+                            <label for="address-1">Address:
+                                <input disabled name="address-1" class="form-control" type="text" required
+                                       value="<?php echo $address1; ?>"/>
+                            </label>
                             <br>
                         </div>
                         <div class="form-group" id="address-2">
-                            <label for="address-2">Address Line 2 (optional):</label>
-                            <input disabled name="address-2" class="form-control" type="text"
-                                   value="<?php echo $address2; ?>"/>
+                            <label for="address-2">Address Line 2 (optional):
+                                <input disabled name="address-2" class="form-control" type="text"
+                                       value="<?php echo $address2; ?>"/>
+                            </label>
                             <br>
                         </div>
                         <div class="form-group" id="city">
-                            <label for="city">City:</label>
-                            <input disabled name="city" class="form-control" type="text" required
-                                   value="<?php echo $city; ?>"/>
+                            <label for="city">City:
+                                <input disabled name="city" class="form-control" type="text" required
+                                       value="<?php echo $city; ?>"/>
+                            </label>
                             <br>
                         </div>
                         <div class="form-group" id="state">
-                            <label for="state">State:</label>
-                            <input disabled name="state" class="form-control" type="text" required
-                                   value="<?php echo $state; ?>">
+                            <label for="state">State:
+                                <input disabled name="state" class="form-control" type="text" required
+                                       value="<?php echo $state; ?>">
+                            </label>
                             <br>
                         </div>
                         <div class="form-group" id="zip-code">
-                            <label for=zip-code>Zip Code:</label>
-                            <input disabled name="zip-code" class="form-control" type="text" required
-                                   value="<?php echo $zip; ?>"/>
+                            <label for=zip-code>Zip Code:
+                                <input disabled name="zip-code" class="form-control" type="text" required
+                                       value="<?php echo $zip; ?>"/>
+                            </label>
                             <br>
                         </div>
                         <div class="form-group" id="phone">
-                            <label for=phone>Phone Number:</label>
-                            <input disabled name="phone" class="form-control" type="text" placeholder="123-456-7890" required
-                                   value="<?php echo $phone; ?>"/>
+                            <label for=phone>Phone Number:
+                                <input disabled name="phone" class="form-control" type="text" placeholder="123-456-7890" required
+                                       value="<?php echo $phone; ?>"/>
+                            </label>
                             <br>
                         </div>
                         <div class="form-group" id="email">
-                            <label for=email>Email Address:</label>
-                            <input disabled name="email" class="form-control" type="text" required
-                                   value="<?php echo $email; ?>"/>
+                            <label for=email>Email Address:
+                                <input disabled name="email" class="form-control" type="text" required
+                                       value="<?php echo $email; ?>"/>
+                            </label>
                             <br>
                         </div>
                     </div>
